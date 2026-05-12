@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SPACE INVADERS</h1>
+        </div>
+
+        <div class="character-selector">
+            <span>CHOOSE HERO:</span>
+            <button class="char-btn active" data-char="neon">NEON</button>
+            <button class="char-btn" data-char="frost">FROST</button>
+            <button class="char-btn" data-char="cosmic">COSMIC</button>
+        </div>
+
+        <div class="theme-preview" id="themePreview">
+            <div class="preview-title">Theme preview</div>
+            <div class="preview-bar">
+                <div class="preview-item preview-player"></div>
+                <div class="preview-item preview-enemy"></div>
+                <div class="preview-item preview-bullet"></div>
+            </div>
+        </div>
+
+        <div class="game-wrapper">
+            <div class="game-info">
+                <div class="score-box">
+                    <label>SCORE</label>
+                    <div id="score">0</div>
+                </div>
+                <div class="lives-box">
+                    <label>LIVES</label>
+                    <div id="lives">3</div>
+                </div>
+            </div>
+
+            <div class="game-board" id="gameBoard">
+                <!-- Enemies will be generated here -->
+                <div class="enemies-grid" id="enemiesGrid"></div>
+
+                <!-- Player -->
+                <div class="player" id="player"></div>
+            </div>
+
+            <div class="game-info bottom">
+                <button class="btn-start" id="startBtn">START GAME</button>
+                <button class="btn-pause" id="pauseBtn">PAUSE</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Use Arrow Keys to Move | Spacebar to Shoot</p>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
