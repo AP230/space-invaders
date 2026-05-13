@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,50 +12,46 @@
             <h1>SPACE INVADERS</h1>
         </div>
 
-        <div class="character-selector">
-            <span>CHOOSE HERO:</span>
-            <button class="char-btn active" data-char="neon">NEON</button>
-            <button class="char-btn" data-char="frost">FROST</button>
-            <button class="char-btn" data-char="cosmic">COSMIC</button>
-        </div>
-
-        <div class="theme-preview" id="themePreview">
-            <div class="preview-title">Theme preview</div>
-            <div class="preview-bar">
-                <div class="preview-item preview-player"></div>
-                <div class="preview-item preview-enemy"></div>
-                <div class="preview-item preview-bullet"></div>
-            </div>
-        </div>
-
         <div class="game-wrapper">
-            <div class="game-info">
+            <div class="top-bar">
                 <div class="score-box">
-                    <label>SCORE</label>
-                    <div id="score">0</div>
+                    <span>SCORE</span>
+                    <strong id="score">0</strong>
+                </div>
+                <div class="wave-box">
+                    <span>WAVE</span>
+                    <strong id="wave">1</strong>
                 </div>
                 <div class="lives-box">
-                    <label>LIVES</label>
-                    <div id="lives">3</div>
+                    <span>LIVES</span>
+                    <strong id="lives">3</strong>
                 </div>
             </div>
 
             <div class="game-board" id="gameBoard">
-                <!-- Enemies will be generated here -->
+                <div class="stars"></div>
                 <div class="enemies-grid" id="enemiesGrid"></div>
-
-                <!-- Player -->
+                <div class="shields-grid" id="shieldsGrid"></div>
+                <div class="ufo hidden" id="ufo"></div>
                 <div class="player" id="player"></div>
             </div>
 
-            <div class="game-info bottom">
+            <div class="controls">
                 <button class="btn-start" id="startBtn">START GAME</button>
                 <button class="btn-pause" id="pauseBtn">PAUSE</button>
             </div>
         </div>
 
         <div class="footer">
-            <p>Use Arrow Keys to Move | Spacebar to Shoot</p>
+            <p>Move with ← →, Shoot with SPACE, Pause with P</p>
+        </div>
+    </div>
+
+    <div class="overlay hidden" id="overlay">
+        <div class="overlay-content">
+            <h2 id="overlayTitle">SPACE INVADERS</h2>
+            <p id="overlayText">Destroy the alien fleet before they reach your base.</p>
+            <button id="overlayBtn">PLAY</button>
         </div>
     </div>
 
